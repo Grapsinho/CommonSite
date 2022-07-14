@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.max-width-cont {
+  max-width: 1200px !important;
+  margin: 0 auto;
+}
+
+header .container {
+  width: 100%;
+  padding: 1em;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  background-color: #2E323F;
+}
+
+header .container .second-cont {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .logo {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+header .container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 100%;
+  background-color: #2E323F;
+  left: 0;
+  top: 100%;
+}
+
+header .container nav .primary-list {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  gap: .5em;
+  display: none;
+  padding-block: 1em;
+}
+
+header .container nav .primary-list .go {
+  margin-bottom: .5em;
+}
+
+header .container nav .primary-list .nav__link {
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+}
+
+header .container nav .primary-list .btn {
+  padding: .2em .7em;
+  background-color: #A59678;
+  border-radius: 1000vmax;
+}
+
+header .container .primary-list.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .container .hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+header .container .bar {
+  display: block;
+  width: 23px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 3px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  header nav {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    position: relative !important;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header nav .primary-list {
+    padding-block: 0 !important;
+    width: -webkit-max-content !important;
+    width: -moz-max-content !important;
+    width: max-content !important;
+    gap: 2em !important;
+  }
+  header nav .go {
+    margin-bottom: 0 !important;
+    margin-right: .5em;
+  }
+  header .hamburger {
+    display: none !important;
+  }
+  header .logo {
+    position: relative !important;
+    left: auto !important;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+  }
+  header .primary-list {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+main {
+  padding: 3em 0;
+}
+
+main .intro .container {
+  width: 100%;
+  padding: 3em 1.5em;
+  height: auto;
+  background-color: #3B4050;
+}
+
+main .intro .container .first-col h1 {
+  color: #A59678;
+  font-family: "Oswald", sans-serif;
+  font-size: calc(2vw + 1.2rem);
+  text-align: center;
+}
+
+main .intro .container .first-col h1 span {
+  color: #ffffff;
+}
+
+main .intro .container .second-col {
+  margin-top: 2em;
+  text-align: center;
+}
+
+main .intro .container .second-col p {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+main .intro .container .second-col .btn {
+  padding: .2em 1em;
+  background-color: #A59678;
+  border-radius: 1000vmax;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+}
+
+@media screen and (min-width: 400px) {
+  main .container {
+    padding: 3em 4em !important;
+  }
+  main .intro .first-col h1 {
+    font-size: calc(2vw + 2rem) !important;
+  }
+}
+
+main .about .container {
+  width: 100%;
+  padding: 3em 1.5em;
+  height: auto;
+  background-color: #F1F1F1;
+  text-align: center;
+}
+
+main .about .container h1 {
+  color: #A59678;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 1em;
+}
+
+main .about .container p {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: .5em;
+}
+
+main .about2 .container {
+  width: 100%;
+  padding: 3em .7em;
+  height: auto;
+  text-align: center;
+}
+
+main .about2 .container .first-col h1 {
+  font-size: 7vw;
+  color: #A59678;
+  font-family: "Oswald", sans-serif;
+}
+
+main .about2 .container .first-col p {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: .5em;
+  margin-top: 1em;
+  font-size: .8rem;
+  text-align: left;
+}
+
+main .about2 .container .second-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+main .about2 .container .second-col .col {
+  background-color: #2E323F;
+  color: #ffffff;
+  padding: 2em 1.5em;
+}
+
+main .about2 .container .second-col .col h1 {
+  margin-bottom: .5em;
+  font-family: "Oswald", sans-serif;
+}
+
+main .about2 .container .second-col .col p {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 700px) {
+  main .container {
+    padding: 3em 10em !important;
+  }
+  main .about2 .container {
+    padding: 3em 3em !important;
+  }
+  main .about2 .first-col h1 {
+    font-size: 1.8rem !important;
+    text-align: left;
+  }
+  main .about2 .first-col .image {
+    height: 250px;
+    width: 100%;
+  }
+  main .about2 .second-col {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main .container {
+    padding: 3em 4em !important;
+  }
+  main .intro .container {
+    padding-block: 6em !important;
+  }
+  main .intro .second-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4em;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  main .intro .second-cont .first-col h1 {
+    text-align: left !important;
+    font-size: 4em !important;
+    line-height: 1 !important;
+  }
+  main .intro .second-cont .second-col {
+    text-align: left !important;
+  }
+  main .about .second-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2em;
+  }
+  main .about2 .container {
+    padding: 3em 6em !important;
+  }
+  main .about2 .second-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4em;
+  }
+  main .about2 .first-col h1 {
+    font-size: 1.8rem !important;
+    text-align: left;
+  }
+  main .about2 .first-col .image {
+    height: 250px;
+    width: 100%;
+  }
+  main .about2 .second-col {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
+footer .container {
+  width: 100%;
+  padding: 3em 1.5em;
+  height: auto;
+  background-color: #3B4050;
+  text-align: center;
+}
+
+footer .container .start {
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+}
+
+footer .container .first-col h1 {
+  color: #A59678;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+footer .container .first-col p {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-size: .9rem;
+}
+
+footer .container .first-col .title {
+  color: #A59678;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+footer .container .title {
+  color: #A59678;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+footer .container .nav__item {
+  margin-bottom: 1em;
+}
+
+footer .container .nav__link {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 350px) {
+  .start {
+    font-size: 1.6rem !important;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  footer .start {
+    font-size: 2.5rem !important;
+  }
+  footer .second-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .second-cont .first-col h1 {
+    font-size: 1.5rem;
+    margin-bottom: .2em !important;
+  }
+  footer .second-cont .big-col {
+    width: 100%;
+  }
+  footer .second-cont .big-col .delete {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  footer .start {
+    font-size: 2.5rem !important;
+  }
+  footer .delete2 {
+    display: none;
+  }
+  footer .second-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    gap: 4em;
+    margin-top: 3em;
+  }
+  footer .second-cont .first-col {
+    width: 75%;
+  }
+  footer .second-cont .big-col {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2em;
+  }
+  footer .second-cont .big-col .col {
+    width: 100%;
+  }
+  footer .second-cont .big-col .delete {
+    display: initial;
+  }
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-4px) rotate(-45deg);
+          transform: translateY(-4px) rotate(-45deg);
+}
+/*# sourceMappingURL=style.css.map */
